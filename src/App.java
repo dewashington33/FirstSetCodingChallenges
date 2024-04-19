@@ -15,5 +15,8 @@ public class App {
         System.out.println("My " + myCar.year + " " + myCar.make +
                 " " + myCar.model + " is a great car!\n" +
                 "My " + myCar.make + " is currently traveling " + mph + " miles per hour.");
+
+        Bytes myBytes = new Bytes();
+        myBytes.printMegaBytesAndKiloBytes(1024);
     }
 }
