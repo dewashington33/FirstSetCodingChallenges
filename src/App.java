@@ -17,6 +17,6 @@ public class App {
                 "My " + myCar.make + " is currently traveling " + mph + " miles per hour.");
 
         Bytes myBytes = new Bytes();
-        myBytes.printMegaBytesAndKiloBytes(1024);
+        myBytes.printMegaBytesAndKiloBytes(99);
     }
 }
