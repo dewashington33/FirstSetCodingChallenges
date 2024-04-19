@@ -18,5 +18,19 @@ public class App {
 
         Bytes myBytes = new Bytes();
         myBytes.printMegaBytesAndKiloBytes(99);
+
+        Dog myDog = new Dog("Della", "CockaPooh", 5, "Brown and White");
+        int hourOfDay = 23;
+        boolean isBarking = true;
+        boolean wakeUp = myDog.shouldWakeup(isBarking, hourOfDay);
+
+        // create a ternary operator to print "My dog Della is barking" if wakeUp is
+        // true
+
+        System.out.println(wakeUp ? "My dog " + myDog.name + " is barking at " +
+                myDog.convertMilitaryToRegular(hourOfDay) + " and I need to wake up!"
+                : "My dog " +
+                        myDog.name + " is not barking");
+
     }
 }
