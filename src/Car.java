@@ -2,8 +2,17 @@ public class Car {
     String make;
     String model;
     int year;
+    int mpg;
+    int fuelCapacity;
 
     public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Overloaded constructor
+    public Car(String make, String model, int year, int mpg, int fuelCapacity) {
         this.make = make;
         this.model = model;
         this.year = year;
