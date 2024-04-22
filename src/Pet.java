@@ -12,4 +12,8 @@ public class Pet {
         System.out.println("Pet is eating");
     }
 
+    public String speak() {
+        return "Pet is speaking";
+    }
+
 }

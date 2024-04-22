@@ -47,4 +47,14 @@ public class Time {
             System.out.println(years + "y " + remainingDays + "d " + remainingHours + "h " + remainingMinutes + "m");
         }
     }
+
+    public static int getQuarter(String month) {
+        return switch (month.toLowerCase()) {
+            case "january", "february", "march" -> 1;
+            case "april", "may", "june" -> 2;
+            case "july", "august", "september" -> 3;
+            case "october", "november", "december" -> 4;
+            default -> -1;
+        };
+    }
 }

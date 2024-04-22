@@ -6,8 +6,9 @@ public class Cat extends Pet {
         this.breed = breed;
     }
 
-    public void meow() {
-        System.out.println("Meow");
+    @Override
+    public String speak() {
+        return "Meow";
     }
 
     public boolean isCatPlaying(int temperature) {

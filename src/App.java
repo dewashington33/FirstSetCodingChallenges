@@ -26,8 +26,7 @@ public class App {
 
                 // create a ternary operator to print "My dog Della is barking" if wakeUp is
                 // true
-
-                System.out.println(wakeUp ? "My dog " + myDog.name + " is barking at " +
+                System.out.println(wakeUp ? "My dog " + myDog.name + " " + myDog.speak() + " is barking at " +
                                 myDog.convertMilitaryToRegular(hourOfDay) + " and I need to wake up!"
                                 : "My dog " +
                                                 myDog.name + " is not barking");
@@ -37,6 +36,14 @@ public class App {
                 System.out
                                 .println(isLeapYear ? year + " is a leap year."
                                                 : year + " is not a leap year.");
+
+                String qtrMonth = "April";
+                int quarter = Time.getQuarter(qtrMonth);
+                // ternary operator to print the quarter of the month where it checks for -1
+                // and prints "Invalid month" if quarter is -1
+                System.out.println(quarter == -1 ? "Invalid month"
+                                : "The quarter for " + qtrMonth +
+                                                " is " + quarter + ".");
 
                 double firstNumber = 3.1756;
                 double secondNumber = 3.176;
@@ -103,17 +110,23 @@ public class App {
 
                 System.out.println("**** Cat ****");
                 Cat myCat1 = new Cat("Mittens", "Siamese", 3, "White");
-                myCat1.meow();
                 int temperature = 30;
                 boolean isPlaying = myCat1.isCatPlaying(temperature);
-                System.out.println(isPlaying ? "My cat is playing." : "My cat is not playing.");
+                System.out.println(isPlaying ? "My cat is playing. " + myCat1.speak() : "My cat is not playing.");
 
                 Cat myCat2 = new Cat("Garfield", "Mixed", 3, "Yellow & White");
-                myCat2.meow();
                 temperature = 47;
                 isPlaying = myCat2.isCatPlaying(temperature);
-                System.out.println(isPlaying ? "My cat is playing." : "My cat is not playing.");
+                System.out.println(isPlaying ? "My cat is playing. " + myCat2.speak() : "My cat is not playing.");
+
+                System.out.println("**** Military ****");
+                System.out.println(Military.militaryToCivilianTime(2330));
+                System.out.println(Military.civilianTimetoMilitary(11, 59, "AM"));
+                System.out.println(Military.civilianTimetoMilitary(11, 59, "PM"));
+
+                // Remember a char data type uses single quotes
+                Military.getMilitaryWordFromAlphabet('S');
+                Military.getMilitaryWordFromAlphabet('H');
 
         }
-
 }
