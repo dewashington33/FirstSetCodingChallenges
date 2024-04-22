@@ -33,11 +33,10 @@ public class App {
                                                 myDog.name + " is not barking");
 
                 int year = 2024;
-                LeapYearCalculator myLeapYear = new LeapYearCalculator(year);
-                boolean isLeapYear = myLeapYear.isLeapYear();
+                boolean isLeapYear = Time.isLeapYear(year);
                 System.out
-                                .println(isLeapYear ? myLeapYear.year + " is a leap year."
-                                                : myLeapYear.year + " is not a leap year.");
+                                .println(isLeapYear ? year + " is a leap year."
+                                                : year + " is not a leap year.");
 
                 double firstNumber = 3.1756;
                 double secondNumber = 3.176;
@@ -68,14 +67,18 @@ public class App {
                                 Metric.calcFeetAndInchesToCentimeters(feet) + " centimeters."
                                 : feet + " feet " + inches + " inches is " +
                                                 Metric.calcFeetAndInchesToCentimeters(feet, inches) + " centimeters.");
-
-                int seconds = 3600;
-                int minutes = 0;
+                System.out.println("**** Time ****");
+                int seconds = 59;
+                int minutes = 65;
                 if (minutes == 0) {
                         Time.getDurationString(seconds);
                 } else {
                         Time.getDurationString(minutes, seconds);
                 }
+
+                System.out.println("***Minutes to Years and Days***");
+                minutes = 570301;
+                Time.printYearsDaysHoursMinutes(minutes);
 
                 double radius = 1;
                 double length = -5;
@@ -92,6 +95,24 @@ public class App {
                                 : "The area of the circle is " + areaCircle + ".");
                 System.out.println(areaRectangle < 0 ? "The length or width of the rectangle cannot be less than 1 "
                                 : "The area of the rectangle is " + areaRectangle + ".");
+
+                MathComparator.printEqual(1, 1, 1);
+                MathComparator.printEqual(1, 2, 3);
+                MathComparator.printEqual(1, 2, 1);
+                MathComparator.printEqual(-1, 1, 1);
+
+                System.out.println("**** Cat ****");
+                Cat myCat1 = new Cat("Mittens", "Siamese", 3, "White");
+                myCat1.meow();
+                int temperature = 30;
+                boolean isPlaying = myCat1.isCatPlaying(temperature);
+                System.out.println(isPlaying ? "My cat is playing." : "My cat is not playing.");
+
+                Cat myCat2 = new Cat("Garfield", "Mixed", 3, "Yellow & White");
+                myCat2.meow();
+                temperature = 47;
+                isPlaying = myCat2.isCatPlaying(temperature);
+                System.out.println(isPlaying ? "My cat is playing." : "My cat is not playing.");
 
         }
 

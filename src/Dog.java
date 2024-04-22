@@ -1,17 +1,12 @@
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class Dog {
-    String name;
+public class Dog extends Pet {
     String breed;
-    int age;
-    String color;
 
     public Dog(String name, String breed, int age, String color) {
-        this.name = name;
+        super(name, age, color);
         this.breed = breed;
-        this.age = age;
-        this.color = color;
     }
 
     /*
