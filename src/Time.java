@@ -57,4 +57,35 @@ public class Time {
             default -> -1;
         };
     }
+
+    public static String getMonthName(int month) {
+        return switch (month) {
+            case 1 -> "January";
+            case 2 -> "February";
+            case 3 -> "March";
+            case 4 -> "April";
+            case 5 -> "May";
+            case 6 -> "June";
+            case 7 -> "July";
+            case 8 -> "August";
+            case 9 -> "September";
+            case 10 -> "October";
+            case 11 -> "November";
+            case 12 -> "December";
+            default -> "Invalid month";
+        };
+    }
+
+    public static int getDaysInMonth(int month, int year) {
+        if (month < 1 || month > 12 || year < 1 || year > 9999) {
+            return -1;
+        } else {
+            return switch (month) {
+                case 1, 3, 5, 7, 8, 10, 12 -> 31;
+                case 4, 6, 9, 11 -> 30;
+                case 2 -> isLeapYear(year) ? 29 : 28;
+                default -> -1;
+            };
+        }
+    }
 }

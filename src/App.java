@@ -31,11 +31,20 @@ public class App {
                                 : "My dog " +
                                                 myDog.name + " is not barking");
 
+                System.out.println("**** Time ****");
+
                 int year = 2024;
                 boolean isLeapYear = Time.isLeapYear(year);
                 System.out
                                 .println(isLeapYear ? year + " is a leap year."
                                                 : year + " is not a leap year.");
+
+                int month = 2;
+                year = 2024;
+                int days = Time.getDaysInMonth(month, year);
+                System.out.println(days == -1 ? "Invalid month or year"
+                                : "There are " + days + " days in the month of " +
+                                                Time.getMonthName(month) + ".");
 
                 String qtrMonth = "April";
                 int quarter = Time.getQuarter(qtrMonth);
@@ -74,7 +83,7 @@ public class App {
                                 Metric.calcFeetAndInchesToCentimeters(feet) + " centimeters."
                                 : feet + " feet " + inches + " inches is " +
                                                 Metric.calcFeetAndInchesToCentimeters(feet, inches) + " centimeters.");
-                System.out.println("**** Time ****");
+
                 int seconds = 59;
                 int minutes = 65;
                 if (minutes == 0) {
@@ -127,6 +136,10 @@ public class App {
                 // Remember a char data type uses single quotes
                 Military.getMilitaryWordFromAlphabet('S');
                 Military.getMilitaryWordFromAlphabet('H');
+
+                System.out.println("**** Numbers ****");
+                System.out.println(Numbers.isPrime(7));
+                System.out.println(Numbers.isPrime(8));
 
         }
 }
