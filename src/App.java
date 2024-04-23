@@ -141,5 +141,12 @@ public class App {
                 System.out.println(Numbers.isPrime(7));
                 System.out.println(Numbers.isPrime(8));
 
+                // Create a loop to print all prime numbers between 1 and 1000
+                for (int i = 1; i <= 1000; i++) {
+                        if (Numbers.isPrime(i)) {
+                                System.out.println(i + " is a prime number.");
+                        }
+                }
+
         }
 }
