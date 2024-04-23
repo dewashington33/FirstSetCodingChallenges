@@ -44,4 +44,5 @@ public class MathComparator {
             System.out.println("Neither all are equal or different");
         }
     }
+
 }

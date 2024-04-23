@@ -148,5 +148,12 @@ public class App {
                         }
                 }
 
+                System.out.println("**** Sum of Divisible by 3 and 5 ****");
+                int begin = 10;
+                int end = 30;
+                System.out.println("Sum of the numbers divisible by 3 and 5 between " +
+                                begin + " and " + end + " is " +
+                                Numbers.sumOfDivisibleByThreeAndFive(begin, end));
+
         }
 }
